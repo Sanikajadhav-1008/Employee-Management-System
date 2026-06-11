@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f5f7fa;
+}
+
+/* ===================== LOGIN PAGE ===================== */
+.loginPage {
+  background: linear-gradient(rgba(11, 11, 11, 0.6), rgba(10, 10, 10, 0.6)),
+    url('/Images/employeems.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loginForm {
+  background-color: rgba(1, 32, 93, 0.75);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+/* ===================== START PAGE ===================== */
+.mainPage {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.heroSection {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.72)),
+    url('/Images/employeems.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 56px;
+  margin-bottom: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.overlay p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.heroButtons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.employeeBtn,
+.adminBtn {
+  padding: 14px 38px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.employeeBtn { background: #007bff; }
+.adminBtn { background: #28a745; }
+.employeeBtn:hover, .adminBtn:hover { transform: translateY(-5px); opacity: 0.9; }
+
+/* ===================== FEATURES ===================== */
+.featuresSection {
+  padding: 80px 50px;
+  background: white;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 700;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.featureCard {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.35s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.09);
+}
+
+.featureCard:hover { transform: translateY(-8px); }
+.icon { font-size: 46px; margin-bottom: 16px; }
+.featureCard h3 { margin-bottom: 12px; color: #222; }
+.featureCard p { color: #666; line-height: 1.6; }
+
+/* ===================== ABOUT ===================== */
+.aboutSection {
+  padding: 72px 60px;
+  background: #f1f5f9;
+  text-align: center;
+}
+.aboutSection h2 { font-size: 36px; margin-bottom: 22px; }
+.aboutSection p { max-width: 900px; margin: auto; font-size: 18px; color: #555; line-height: 1.8; }
+
+/* ===================== FOOTER ===================== */
+.footerText {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  font-weight: bold;
+}
+
+.footerText span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 25s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ===================== ADMIN SIDEBAR ===================== */
+.sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand h5 {
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sidebar-brand small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.sidebar-nav { padding: 12px 0; }
+
+.sidebar-nav .nav-link {
+  color: #cbd5e1 !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 2px 10px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background: rgba(99,102,241,0.25) !important;
+  color: #a5b4fc !important;
+}
+
+.sidebar-nav .nav-link i {
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.sidebar-logout { margin-top: auto; padding: 16px 10px 24px; }
+
+.main-header {
+  background: white;
+  padding: 16px 28px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.main-header h5 {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.content-area {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: calc(100vh - 60px);
+}
+
+/* ===================== STAT CARDS ===================== */
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-left: 4px solid;
+  transition: 0.3s;
+}
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.stat-card .stat-icon { font-size: 32px; }
+.stat-card .stat-value { font-size: 28px; font-weight: 700; color: #1e293b; }
+.stat-card .stat-label { color: #64748b; font-size: 13px; font-weight: 500; }
+
+/* ===================== TABLES ===================== */
+.custom-table {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.custom-table table {
+  margin: 0;
+}
+
+.custom-table thead th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 14px 16px;
+}
+
+.custom-table tbody td {
+  padding: 13px 16px;
+  vertical-align: middle;
+  border-color: #f1f5f9;
+  color: #334155;
+  font-size: 14px;
+}
+
+.custom-table tbody tr:hover { background: #f8fafc; }
+
+/* ===================== FORMS ===================== */
+.form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-card h4 {
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* ===================== EMPLOYEE IMAGES ===================== */
+.employee_image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.emp_det_image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6366f1;
+}
+
+/* ===================== EMPLOYEE PORTAL ===================== */
+.emp-sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
+  width: 230px;
+  flex-shrink: 0;
+}
+
+.emp-sidebar .sidebar-brand h5 { color: #d1fae5; }
+.emp-sidebar .sidebar-brand small { color: #6ee7b7; }
+
+.emp-sidebar .nav-link {
+  color: #a7f3d0 !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 2px 10px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+.emp-sidebar .nav-link:hover,
+.emp-sidebar .nav-link.active {
+  background: rgba(16,185,129,0.25) !important;
+  color: #ecfdf5 !important;
+}
+
+/* ===================== BADGES ===================== */
+.badge-present { background: #dcfce7; color: #16a34a; }
+.badge-absent { background: #fee2e2; color: #dc2626; }
+.badge-late { background: #fef9c3; color: #ca8a04; }
+.badge-pending { background: #fef3c7; color: #d97706; }
+.badge-approved { background: #dcfce7; color: #16a34a; }
+.badge-rejected { background: #fee2e2; color: #dc2626; }
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===================== PAGE TITLES ===================== */
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+.page-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
