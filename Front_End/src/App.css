@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f5f7fa;
+}
+
+/* ===================== LOGIN PAGE ===================== */
+.loginPage {
+  background: linear-gradient(rgba(11, 11, 11, 0.6), rgba(10, 10, 10, 0.6)),
+    url('/Images/employeems.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loginForm {
+  background-color: rgba(1, 32, 93, 0.75);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+/* ===================== START PAGE ===================== */
+.mainPage {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.heroSection {
+  min-height: 100vh;
+  background:
+    linear-gradient(115deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.82) 42%, rgba(15, 23, 42, 0.55) 100%),
+    url('/Images/employeems.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+.heroGrid {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.heroLeft { text-align: left; }
+
+.heroEyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: 18px;
+}
+
+.heroLeft h1 {
+  font-size: 50px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.heroSub {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 460px;
+}
+
+/* Right side: portal picker cards */
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.portalCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 22px 22px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  color: white;
+}
+
+.portalCard:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.portalIcon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.adminCard .portalIcon { background: rgba(99, 102, 241, 0.25); color: #a5b4fc; }
+.adminCard:hover { border-color: rgba(99, 102, 241, 0.55); }
+
+.employeeCard .portalIcon { background: rgba(34, 197, 94, 0.2); color: #86efac; }
+.employeeCard:hover { border-color: rgba(34, 197, 94, 0.5); }
+
+.portalBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.portalLabel {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.portalWho {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.portalDesc {
+  font-size: 13.5px;
+  color: #cbd5e1;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.portalArrow {
+  flex-shrink: 0;
+  font-size: 18px;
+  color: #94a3b8;
+  transition: transform 0.25s ease;
+}
+
+.portalCard:hover .portalArrow {
+  transform: translateX(4px);
+  color: white;
+}
+
+@media (max-width: 860px) {
+  .heroSection { padding: 60px 24px; }
+  .heroGrid { grid-template-columns: 1fr; gap: 40px; }
+  .heroLeft { text-align: center; }
+  .heroLeft h1 { font-size: 36px; }
+  .heroSub { margin: 0 auto; }
+  .heroEyebrow { display: block; }
+}
+
+/* ===================== FEATURES ===================== */
+.featuresSection {
+  padding: 80px 50px;
+  background: white;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 700;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.featureCard {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.35s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.09);
+}
+
+.featureCard:hover { transform: translateY(-8px); }
+.icon { font-size: 46px; margin-bottom: 16px; }
+.featureCard h3 { margin-bottom: 12px; color: #222; }
+.featureCard p { color: #666; line-height: 1.6; }
+
+/* ===================== ABOUT ===================== */
+.aboutSection {
+  padding: 72px 60px;
+  background: #f1f5f9;
+  text-align: center;
+}
+.aboutSection h2 { font-size: 36px; margin-bottom: 22px; }
+.aboutSection p { max-width: 900px; margin: auto; font-size: 18px; color: #555; line-height: 1.8; }
+
+/* ===================== FOOTER ===================== */
+.footerText {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 13px;
+  background: #0f172a;
+  padding: 14px 0;
+}
+
+.footerText span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 25s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ===================== ADMIN SIDEBAR ===================== */
+.sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand h5 {
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sidebar-brand small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.sidebar-nav { padding: 12px 0; }
+
+.sidebar-nav .nav-link {
+  color: #cbd5e1 !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 2px 10px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background: rgba(99,102,241,0.25) !important;
+  color: #a5b4fc !important;
+}
+
+.sidebar-nav .nav-link i {
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.sidebar-logout { margin-top: auto; padding: 16px 10px 24px; }
+
+.main-header {
+  background: white;
+  padding: 16px 28px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.main-header h5 {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.content-area {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: calc(100vh - 60px);
+}
+
+/* ===================== STAT CARDS ===================== */
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-left: 4px solid;
+  transition: 0.3s;
+}
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.stat-card .stat-icon { font-size: 32px; }
+.stat-card .stat-value { font-size: 28px; font-weight: 700; color: #1e293b; }
+.stat-card .stat-label { color: #64748b; font-size: 13px; font-weight: 500; }
+
+/* ===================== TABLES ===================== */
+.custom-table {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.custom-table table {
+  margin: 0;
+}
+
+.custom-table thead th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 14px 16px;
+}
+
+.custom-table tbody td {
+  padding: 13px 16px;
+  vertical-align: middle;
+  border-color: #f1f5f9;
+  color: #334155;
+  font-size: 14px;
+}
+
+.custom-table tbody tr:hover { background: #f8fafc; }
+
+/* ===================== FORMS ===================== */
+.form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-card h4 {
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* ===================== EMPLOYEE IMAGES ===================== */
+.employee_image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.emp_det_image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6366f1;
+}
+
+/* ===================== EMPLOYEE PORTAL ===================== */
+.emp-sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
+  width: 230px;
+  flex-shrink: 0;
+}
+
+.emp-sidebar .sidebar-brand h5 { color: #d1fae5; }
+.emp-sidebar .sidebar-brand small { color: #6ee7b7; }
+
+.emp-sidebar .nav-link {
+  color: #a7f3d0 !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 2px 10px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+.emp-sidebar .nav-link:hover,
+.emp-sidebar .nav-link.active {
+  background: rgba(16,185,129,0.25) !important;
+  color: #ecfdf5 !important;
+}
+
+/* ===================== BADGES ===================== */
+.badge-present { background: #dcfce7; color: #16a34a; }
+.badge-absent { background: #fee2e2; color: #dc2626; }
+.badge-late { background: #fef9c3; color: #ca8a04; }
+.badge-pending { background: #fef3c7; color: #d97706; }
+.badge-approved { background: #dcfce7; color: #16a34a; }
+.badge-rejected { background: #fee2e2; color: #dc2626; }
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===================== PAGE TITLES ===================== */
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+.page-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
